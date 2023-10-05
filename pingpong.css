@@ -1,0 +1,56 @@
+:root{
+    --hue: 200;
+    --saturation: 50%;
+    --background-color: hsl(var(--hue), var(--saturation),20%);
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: var(--background-color);
+    overflow: hidden;
+}
+
+#display{
+    height: 100%;
+    width: 100%;
+    /* border: 1px solid rgb(228, 23, 23); */
+    box-sizing: border-box;
+    position: relative;
+}
+
+.paddle{
+    --left-position: 50;
+    height: 3%;
+    width: 10%;
+    border-radius: 30px;
+    border: 1px solid black;
+    position: absolute;
+    left: calc(var(--left-position)*1%);
+    transform: translateX(-50%);
+}
+
+.top{
+    top: 1%;
+    background-color: aqua;
+    text-align: center;
+}
+
+.bottom{
+    top: 96%;
+    background-color: greenyellow;
+    text-align: center;
+}
+
+#ball{
+    --x: 50;
+    --y: 50;
+    height: 2.5vh;
+    width: 2.5vh;
+    border-radius: 50%;
+    background-color: lightgrey;
+    position: absolute;
+    left: calc(var(--x) * 1%);
+    top: calc(var(--y) * 1%);
+    transform: translate(-50% , -50%);
+}
